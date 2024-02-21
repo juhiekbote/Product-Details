@@ -1,0 +1,1 @@
+using ProductDetails as service from '../../srv/main-srv';

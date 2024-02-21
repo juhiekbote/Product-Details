@@ -1,0 +1,15 @@
+### Get product details
+http://localhost:4004/odata/v2/product-details/ProductDetailsHANA
+
+
+###Post product details
+POST http://localhost:4004/odata/v2/product-details/ProductDetailsHANA
+Content-Type: application/json
+
+{
+    "ID" : "3",
+    "Name": "Mojito",
+    "Description": "Fresh Lime and Mint Mojito",
+    "Price": "100",
+    "Rating": "3"
+}

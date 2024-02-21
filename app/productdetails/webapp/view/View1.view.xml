@@ -1,0 +1,32 @@
+<mvc:View controllerName="productdetails.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns:smarttable="sap.ui.comp.smarttable" 
+    xmlns:smartfilterbar="sap.ui.comp.smartfilterbar"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content >
+        
+                    <smartfilterbar:SmartFilterBar  id="smartFilterBar" entitySet="ProductDetailsNorthwind">
+                    <smartfilterbar:controlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="ID" label="ID" key="ID">
+                    </smartfilterbar:ControlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="Name" visibleInAdvancedArea="true" label="Name" key="Name">
+                    </smartfilterbar:ControlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="Description" visibleInAdvancedArea="true" label="Description" key="Description">
+                    </smartfilterbar:ControlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="Rating" visibleInAdvancedArea="true" label="Rating" key="Rating">
+                    </smartfilterbar:ControlConfiguration>
+                    <smartfilterbar:ControlConfiguration id="Price" visibleInAdvancedArea="true" label="Price" key="Price">
+                    </smartfilterbar:ControlConfiguration>
+                    </smartfilterbar:controlConfiguration>
+                    </smartfilterbar:SmartFilterBar>
+                    <smarttable:SmartTable  id="smartTable" smartFilterId="smartFilterBar" entitySet="ProductDetailsNorthwind" enableAutoBinding="true" initiallyVisibleFields="Name,Description,Rating,Price" tableType="ResponsiveTable" >
+                    <Table id="productTableId" selectionChange="onProductTableChange" mode="SingleSelectMaster">
+                    <items>
+                    <ColumnListItem type="Navigation"></ColumnListItem>
+                    </items>
+                    </Table>
+                    </smarttable:SmartTable>
+
+                    </content>
+    </Page>
+</mvc:View>
